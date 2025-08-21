@@ -1,0 +1,30 @@
+{
+  "name": "excalidraw-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "image-size": "2.0.2",
+    "libreoffice": "0.4.5",
+    "libreoffice-convert": "1.6.1",
+    "multer": "1.4.5-lts.1",
+    "node-fetch": "^2.7.0",
+    "nodemon": "3.1.10",
+    "pdf-page-counter": "1.0.3",
+    "svgo": "^3.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "cross-env NODE_ENV=development nodemon index.js",
+    "start:lab": "node lab.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

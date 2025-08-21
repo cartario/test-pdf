@@ -46,6 +46,10 @@ app.get("/", (req, res) => {
     res.send(`Server pdf is working. Storage-backend: ${getStorageBackendUrl(req)}`);
 });
 
+app.get("/v3", (req, res) => {
+    res.send(`v3`);
+});
+
 app.post("/upload/:fileHash", upload.single("pdfFile"), async (req, res, next) => {
     try {
         const fileHash = req.params?.fileHash;

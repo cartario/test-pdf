@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Указываем порт, который слушает приложение
-EXPOSE 3003
+EXPOSE 3004
 
 # Запускаем сервер (контейнер стартует с этим процессом)
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "start"]

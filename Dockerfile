@@ -1,5 +1,15 @@
-FROM node:18.20.3-alpine3.20
-WORKDIR /app
+# Используем официальный образ Node.js в качестве базового образа
+FROM node:latest
 
-EXPOSE 80
-CMD ["npm", "start"]
+####################################################
+# Создаем рабочую директорию
+WORKDIR /app
+# Копируем файлы package.json
+COPY package.json ./
+# Устанавливаем зависимости для клиента
+RUN npm install
+COPY . .
+
+
+EXPOSE 3003
+
